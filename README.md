@@ -38,6 +38,7 @@ Enable Duty Cycling Regulation features on SAM R30 MiWi P2P Simple Application.
 1. [Sample Applications](#step4)
 1. [Duty Cycling APIs](#step5)
 1. [Run the Demo](#step6)
+1. [Limitations](#step7)
 
 ## Introduction<a name="step1"></a>
 
@@ -125,6 +126,12 @@ The present repository contains the following sample applications:
 - `dutyCycling.c` and `dutyCycling.h` are the duty cycling implementation files for MiWi-P2P
 - `main.c` and `task.c` have been modified for the purpose of this demo
 
+The simple example application code focuses on the simplicity of the MiWi™ DE protocol stack application programming interfaces. It provides a clean and straightforward wireless communication between two devices with less than 30 lines of effective C code to run the stack in application layer for both devices. In this application, following features of MiWi™ DE protocol stack have been demonstrated:
+* Establish connection automatically between two devices
+* Broadcast a packet
+* Unicast a packet
+* Apply security to the transmitted packet
+
 > Version information of the MiWi stack is defined in `miwi_api.h` file.
 
 <p align="center">
@@ -196,6 +203,12 @@ As illustrated below:
 <img src="resources/media/console_02.png" width=>
 </p>
 
+## Limitations<a name="step7"></a>
+
+- In this sample application, Duty cycling has been implemented for the End Device role only
+- Duty cycling is performed on applicative payload transmission from end-device to coordinator
+- Duty cycling is not implemented for ACK packets
+- Time on air has been calculated with size of the payload and radio parameters which are coming from the SAM R30 datasheet (checkout in `dutyCycling.h`)
 
 [Back to top](#top)
 
