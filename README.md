@@ -1,4 +1,6 @@
 # ATSAMR30_MIWI_P2P_DUTY_CYCLE
+<img src="resources/media/IoT-Made-Easy-Logo.png" width=100>
+
 > "Wireless Made Easy!" - Enable Duty Cycling Regulation features on SAM R30 MiWi P2P Simple Application
 
 Devices: | **ATSAMR30 | ATSAMR30M**
